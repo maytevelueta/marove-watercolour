@@ -1,8 +1,8 @@
 import React from "react";
-import MinimalPortfolioSite from "./MinimalPortfolioSite";
+import Home from "./pages/Home";
 
 function App() {
-  return <MinimalPortfolioSite />;
+  return <Home />;
 }
 
 export default App;
