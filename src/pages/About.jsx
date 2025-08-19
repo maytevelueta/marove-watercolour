@@ -1,12 +1,12 @@
 import React from "react";
-import Header from "../components/Header";
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "./About.css";
 
 export default function About() {
   return (
     <div className="about-page">
-      <Header />
+      <Navbar />
       <main className="main-content">
         <section className="about-section">
           <h2>About</h2>

@@ -1,12 +1,12 @@
 import React from "react";
-import Header from "../components/Header";
+import Navbar from "../components/Nabvar";
 import Footer from "../components/Footer";
 import "./Home.css";
 
 export default function Home() {
   return (
     <div className="home-page">
-      <Header />
+      <Navbar />
       <main className="main-content">
         <section className="intro-section">
           <h2>Welcome to Marove Aqua</h2>
