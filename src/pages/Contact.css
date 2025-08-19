@@ -1,0 +1,36 @@
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.contact-section {
+  flex: 1;
+  padding: 4rem 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  color: #333;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contact-section a {
+  color: #555;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-section a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.contact-section p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}

@@ -3,29 +3,25 @@
   flex-direction: column;
   min-height: 100vh;
   font-family: Arial, sans-serif;
-  background: #fdfdfd;
-  color: #333;
 }
 
-.main-content {
+.hero-section {
   flex: 1;
   display: flex;
   justify-content: center;
-  padding: 3rem 1rem;
-}
-
-.intro-section {
-  max-width: 700px;
+  align-items: center;
+  background: linear-gradient(to bottom, #fefefe, #e0f7fa);
   text-align: center;
+  padding: 5rem 2rem;
 }
 
-.intro-section h2 {
-  font-size: 2rem;
+.hero-text h1 {
+  font-size: 3rem;
   margin-bottom: 1rem;
+  color: #333;
 }
 
-.intro-section p {
-  font-size: 1.1rem;
-  line-height: 1.6;
+.hero-text p {
+  font-size: 1.2rem;
   color: #555;
 }

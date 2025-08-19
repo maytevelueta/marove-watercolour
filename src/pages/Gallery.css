@@ -3,30 +3,22 @@
   flex-direction: column;
   min-height: 100vh;
   font-family: Arial, sans-serif;
-  background: #fdfdfd;
-  color: #333;
-}
-
-.main-content {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  padding: 3rem 1rem;
 }
 
 .gallery-section {
-  max-width: 800px;
+  flex: 1;
+  padding: 4rem 2rem;
   text-align: center;
 }
 
 .gallery-section h2 {
   font-size: 2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  color: #333;
 }
 
-.gallery-img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+.carousel-image {
+  width: 80%;
   margin: 0 auto;
+  border-radius: 8px;
 }

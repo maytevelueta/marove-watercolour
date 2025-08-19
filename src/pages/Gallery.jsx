@@ -2,9 +2,9 @@ import React from "react";
 import Slider from "react-slick";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import "./Gallery.css";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "./Gallery.css";
 
 export default function Gallery() {
   const settings = {
@@ -13,7 +13,8 @@ export default function Gallery() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
   };
 
   const images = [
@@ -26,17 +27,15 @@ export default function Gallery() {
   return (
     <div className="gallery-page">
       <Navbar />
-      <main className="main-content">
-        <section className="gallery-section">
-          <h2>Gallery</h2>
-          <Slider {...settings}>
-            {images.map((src, index) => (
-              <div key={index}>
-                <img src={src} alt={`Artwork ${index + 1}`} className="gallery-img" />
-              </div>
-            ))}
-          </Slider>
-        </section>
+      <main className="gallery-section">
+        <h2>Gallery</h2>
+        <Slider {...settings}>
+          {images.map((img, index) => (
+            <div key={index}>
+              <img src={img} alt={`Artwork ${index + 1}`} className="carousel-image" />
+            </div>
+          ))}
+        </Slider>
       </main>
       <Footer />
     </div>
