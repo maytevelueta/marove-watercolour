@@ -6,6 +6,7 @@ import "./About.css";
 export default function About() {
   return (
     <div className="about-page">
+    <section className="section fade-in">
       <Navbar />
       <main className="about-section">
         <h2>About</h2>
@@ -15,6 +16,7 @@ export default function About() {
         </p>
       </main>
       <Footer />
+    </section>
     </div>
   );
 }

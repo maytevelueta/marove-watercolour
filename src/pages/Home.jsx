@@ -1,20 +1,18 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import "./Home.css";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
-    <div className="home-page">
-      <Navbar />
-      <main className="hero-section">
-        <div className="hero-text">
-          <h1>Marove Aqua</h1>
-          <p>Watercolour Portfolio | Minimalist & Serene</p>
-        </div>
-      </main>
-      <Footer />
+    <div style={{ textAlign: "center", padding: "50px" }}>
+    <section className="section fade-in">
+      <h1>Marove Aqua</h1>
+      <p>Watercolour Portfolio</p>
+      <nav>
+        <Link to="/about">About</Link> |{" "}
+        <Link to="/gallery">Gallery</Link> |{" "}
+        <Link to="/contact">Contact</Link>
+      </nav>
+    </section>
     </div>
   );
 }
-

@@ -26,6 +26,7 @@ export default function Gallery() {
 
   return (
     <div className="gallery-page">
+    <section className="section fade-in">
       <Navbar />
       <main className="gallery-section">
         <h2>Gallery</h2>
@@ -38,6 +39,7 @@ export default function Gallery() {
         </Slider>
       </main>
       <Footer />
+    </section>
     </div>
   );
 }
