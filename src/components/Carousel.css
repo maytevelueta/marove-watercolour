@@ -1,57 +1,23 @@
-.carousel-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 650px; /* slightly larger */
-  margin: auto;
-}
-
-.carousel {
+.carousel-wrapper {
+  width: 100%;
   overflow: hidden;
-  width: 100%;
-  border-radius: 10px;
+  padding: 1rem 0;
 }
 
-.carousel img {
-  width: 100%;
+.carousel-track {
+  display: flex;
+  gap: 1rem;
+  animation: scroll 20s linear infinite;
+}
+
+.carousel-track img {
+  width: 150px; /* smaller size */
   height: auto;
-  display: block;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.carousel img:hover {
-  transform: scale(1.02);
-}
-
-/* Arrows */
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 15px;
-  height: 15px;
-  background-color: rgb(79, 75, 75);
-  clip-path: polygon(100% 50%, 0 0, 0 100%);
-  border: none;
-  cursor: pointer;
-  z-index: 10;
-  opacity: 0.7;
-  transition: opacity 0.2s, transform 0.2s;
-}
-
-.arrow:hover {
-  opacity: 1;
-  transform: translateY(-50%) scale(1.2);
-}
-
-.arrow.left {
-  left: -35px; 
-  transform: translateY(-50%) rotate(180deg);
-}
-
-.arrow.right {
-  right: -35px;
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* half because we duplicated images */
 }
