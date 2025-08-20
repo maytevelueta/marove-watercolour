@@ -71,3 +71,15 @@ footer {
 .carousel-container img:hover {
   transform: scale(1.02);
 }
+
+.back-home {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.back-home:hover {
+  color: #555; 
+}
+

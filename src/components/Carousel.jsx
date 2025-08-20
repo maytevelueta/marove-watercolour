@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Carousel.css'; 
+import './Carousel.css';
 
 export default function Carousel() {
   const images = [
@@ -15,10 +15,12 @@ export default function Carousel() {
   const prev = () => setCurrent((current - 1 + images.length) % images.length);
 
   return (
-    <div className="carousel">
-      <button className="arrow left" onClick={prev}>❮</button>
-      <img className="carousel-image" src={images[current]} alt={`Artwork ${current + 1}`} />
-      <button className="arrow right" onClick={next}>❯</button>
+    <div className="carousel-container">
+      <button className="arrow left" onClick={prev}></button>
+      <div className="carousel">
+        <img src={images[current]} alt={`Artwork ${current + 1}`} />
+      </div>
+      <button className="arrow right" onClick={next}></button>
     </div>
   );
 }

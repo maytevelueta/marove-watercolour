@@ -1,12 +1,15 @@
 import React from 'react';
 import Carousel from '../components/Carousel';
-import '../index.css'; // for global styles
-import './Gallery.css'; // optional page-specific styles
+import '../index.css'; 
+import './Gallery.css';
+import { Link } from 'react-router-dom';
 
 export default function Gallery() {
   return (
     <div className="page gallery-page">
-      <h2 className="page-title fade-in">Gallery</h2>
+      <h2>
+        <Link to="/" className="back-home">Gallery</Link>
+      </h2>
 
       <section className="section fade-in carousel-container">
         <Carousel />
