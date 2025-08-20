@@ -33,6 +33,50 @@ nav a:hover {
   color: #555;
 }
 
+/* ---------- WELCOME SECTION ---------- */
+.welcome-section {
+  text-align: center;
+  padding: 15% 0;
+  background: linear-gradient(135deg, #fafafa, #f0f0f0);
+}
+
+/* Container animation */
+.home-title {
+  font-size: 2.8rem;
+  font-weight: 500;
+  display: inline-block;
+  transform: scale(0.94);
+  animation: scaleUp 4s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+/* Animate each word individually */
+.title {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s forwards;
+}
+
+/* delay for each word */
+.title:nth-child(1) { animation-delay: 0.3s; }
+.title:nth-child(2) { animation-delay: 0.6s; }
+.title:nth-child(3) { animation-delay: 0.9s; }
+.title:nth-child(4) { animation-delay: 1.2s; }
+.title:nth-child(5) { animation-delay: 1.5s; }
+
+/* Keyframes */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleUp {
+  to {
+    transform: scale(1);
+  }
+}
+
 /* ---------- ABOUT SECTION ---------- */
 .about-text {
   max-width: 800px;        /* keeps text readable */
