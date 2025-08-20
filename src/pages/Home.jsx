@@ -1,22 +1,46 @@
-import React from 'react';
-import Navbar from '../components/Navbar';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import './Home.css';
+
+const images = [
+  '/images/art1.jpg',
+  '/images/art2.jpg',
+  '/images/art3.jpg',
+  '/images/art4.jpg',
+  '/images/art5.jpg'
+];
 
 export default function Home() {
-  return (
-    <>
-      <Navbar />
-      <section className="section fade-in">
-        <h1>Marove Aqua</h1>
-        <p>Watercolour Portfolio</p>
-      </section>
+  const [current, setCurrent] = useState(0);
 
-      <section className="section fade-in">
-        <h2>About</h2>
-        <p>
-          I am a watercolour artist inspired by nature, light, and simplicity.
-          Each piece captures the fleeting beauty of the natural world.
-        </p>
+  // Automatic carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent(prev => (prev + 1) % images.length);
+    }, 3000); // 3 seconds
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="home-page">
+      {/* Automatic carousel */}
+      <div className="carousel-container">
+        <div className="carousel">
+          <img src={images[current]} alt={`Artwork ${current + 1}`} />
+        </div>
+      </div>
+
+      {/* Block gallery */}
+      <section className="section gallery fade-in">
+        <h2>Gallery</h2>
+        <div className="grid">
+          {images.map((img, i) => (
+            <Link to="/gallery" key={i}>
+              <img src={img} alt={`Artwork ${i + 1}`} />
+            </Link>
+          ))}
+        </div>
       </section>
-    </>
+    </div>
   );
 }

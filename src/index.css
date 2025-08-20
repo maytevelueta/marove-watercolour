@@ -1,85 +1,107 @@
-/* src/index.css */
-
-body {
+/* General reset */
+* {
   margin: 0;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  background-color: #fefefe;
-  color: #333;
-  line-height: 1.6;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Body */
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  color: #111111;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5 {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Links */
 a {
   text-decoration: none;
-  color: #0077cc;
+  color: inherit;
   transition: color 0.3s;
 }
 
 a:hover {
-  color: #005fa3;
+  color: #555;
 }
 
-nav a {
-  margin: 0 10px;
-}
-
-h1, h2 {
-  font-weight: 400;
-  margin-bottom: 20px;
-}
-
+/* Sections */
 .section {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: auto;
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem 0;
 }
 
-footer {
-  text-align: center;
-  padding: 40px 20px;
-  font-size: 0.9rem;
-  color: #777;
-}
-
-/* Add to src/index.css */
-
+/* Fade-in effect for all sections */
 .fade-in {
   opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s forwards;
+  animation: fadeIn 1s forwards;
 }
 
-@keyframes fadeInUp {
+@keyframes fadeIn {
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
-/* src/components/GalleryCarousel.css */
-.carousel-container {
-  max-width: 900px;
-  margin: auto;
-}
-
-.carousel-container img {
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
-
-.carousel-container img:hover {
-  transform: scale(1.02);
-}
-
-.back-home {
-  text-decoration: none;
-  color: black;
+/* Buttons */
+button {
+  background-color: transparent;
+  border: none;
   cursor: pointer;
-  transition: color 0.2s;
+  font-size: 1rem;
+  transition: transform 0.2s, color 0.2s;
 }
 
-.back-home:hover {
-  color: #555; 
+button:hover {
+  transform: scale(1.05);
 }
 
+/* Images */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Grids (for galleries) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+/* Navigation/header (if used globally) */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Misc spacing utilities */
+.mt-2 { margin-top: 0.5rem; }
+.mt-4 { margin-top: 1rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-4 { margin-bottom: 1rem; }
+.p-2 { padding: 0.5rem; }
+.p-4 { padding: 1rem; }
