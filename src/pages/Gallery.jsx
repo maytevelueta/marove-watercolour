@@ -1,25 +1,26 @@
 import React from 'react';
-import Carousel from '../components/Carousel';
-import '../index.css'; 
-import './Gallery.css';
-import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 export default function Gallery() {
+  const images = [
+    '/images/art1.jpg',
+    '/images/art2.jpg',
+    '/images/art3.jpg',
+    '/images/art4.jpg',
+    '/images/art5.jpg',
+  ];
+
   return (
-    <div className="page gallery-page">
-      <h2>
-        <Link to="/" className="back-home">Gallery</Link>
-      </h2>
-
-      <section className="section fade-in carousel-container">
-        <Carousel />
+    <>
+      <Navbar />
+      <section className="section fade-in">
+        <h2>Gallery</h2>
+        <div className="grid">
+          {images.map((src, i) => (
+            <img key={i} src={src} alt={`Artwork ${i + 1}`} />
+          ))}
+        </div>
       </section>
-
-      <section className="section fade-in gallery-description">
-        <p>
-          Explore the collection of watercolours inspired by nature, light, and minimalism.
-        </p>
-      </section>
-    </div>
+    </>
   );
 }

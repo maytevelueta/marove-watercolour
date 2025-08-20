@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Carousel.css';
 
-export default function Carousel() {
+export default function Carousel({ autoPlay = false, interval = 3000 }) {
   const images = [
     '/images/art1.jpg',
     '/images/art2.jpg',
@@ -12,15 +12,18 @@ export default function Carousel() {
   const [current, setCurrent] = useState(0);
 
   const next = () => setCurrent((current + 1) % images.length);
-  const prev = () => setCurrent((current - 1 + images.length) % images.length);
+
+  useEffect(() => {
+    if (!autoPlay) return;
+    const id = setInterval(next, interval);
+    return () => clearInterval(id);
+  }, [current, autoPlay, interval]);
 
   return (
     <div className="carousel-container">
-      <button className="arrow left" onClick={prev}></button>
       <div className="carousel">
         <img src={images[current]} alt={`Artwork ${current + 1}`} />
       </div>
-      <button className="arrow right" onClick={next}></button>
     </div>
   );
 }
