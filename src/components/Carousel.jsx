@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import './Carousel.css'; // optional for styling
+import './Carousel.css'; 
 
 export default function Carousel() {
   const images = [
     '/images/art1.jpg',
     '/images/art2.jpg',
     '/images/art3.jpg',
-    '/images/art4.jpg'
+    '/images/art4.jpg',
+    '/images/art5.jpg'
   ];
   const [current, setCurrent] = useState(0);
 
