@@ -1,5 +1,6 @@
-import React from 'react';
-import Navbar from '../components/Navbar';
+import React, { useState } from "react";
+import Lightbox from "../components/Lightbox";
+import "./Gallery.css";
 
 export default function Gallery() {
   const images = [
@@ -7,20 +8,27 @@ export default function Gallery() {
     '/images/art2.jpg',
     '/images/art3.jpg',
     '/images/art4.jpg',
-    '/images/art5.jpg',
+    '/images/art5.jpg'
   ];
 
+  const [selected, setSelected] = useState(null);
+
   return (
-    <>
-      <Navbar />
-      <section className="section fade-in">
-        <h2>Gallery</h2>
-        <div className="grid">
-          {images.map((src, i) => (
-            <img key={i} src={src} alt={`Artwork ${i + 1}`} />
-          ))}
-        </div>
-      </section>
-    </>
+    <div className="gallery-page">
+      <h2>Gallery</h2>
+      <div className="gallery-grid">
+        {images.map((img, index) => (
+          <img
+            key={index}
+            src={img}
+            alt={`Artwork ${index + 1}`}
+            onClick={() => setSelected(img)}
+          />
+        ))}
+      </div>
+
+      <Lightbox src={selected} onClose={() => setSelected(null)} />
+    </div>
   );
 }
+

@@ -1,65 +1,49 @@
-body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background-color: #fff;
-  color: #111;
-  margin: 0;
-  line-height: 1.6;
-}
-
-/* Navbar */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 5%;
-  background-color: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-nav h1 {
-  font-weight: 500;
-}
-
-nav a {
-  margin-left: 1rem;
-  text-decoration: none;
-  color: #111;
-}
-
-nav a:hover {
-  color: #555;
-}
-
-/* Sections */
-.section {
-  width: 90%;
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 1rem 0;
-}
-
-/* Fade-in */
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 1s forwards;
-}
-
-@keyframes fadeIn {
-  to { opacity: 1; }
-}
-
-/* Grid for gallery */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-}
-
+/* Remove global img width affecting everything */
 img {
-  width: 100%;
+  display: block;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  display: block;
+}
+
+/* Carousel images - smaller and responsive */
+.carousel img {
+  width: auto;
+  max-width: 200px; /* or whatever smaller size you want */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Gallery grid images - full width in grid */
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
+/* Lightbox overlay for full-screen view */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: zoom-out;
+}
+
+.lightbox-image {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
 }
