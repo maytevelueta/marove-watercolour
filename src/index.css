@@ -1,23 +1,94 @@
-/* Remove global img width affecting everything */
-img {
-  display: block;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+/* ---------- GLOBAL STYLES ---------- */
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #fff;
+  color: #111;
+  margin: 0;
+  line-height: 1.6;
 }
 
-/* Carousel images - smaller and responsive */
-.carousel img {
-  width: auto;
-  max-width: 200px; /* or whatever smaller size you want */
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+/* ---------- NAVBAR ---------- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-/* Gallery grid images - full width in grid */
+nav h1 {
+  font-weight: 500;
+}
+
+nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #111;
+}
+
+nav a:hover {
+  color: #555;
+}
+
+/* ---------- ABOUT SECTION ---------- */
+.about-text {
+  max-width: 800px;        /* keeps text readable */
+  margin: 2rem auto;       /* centers on the page */
+  padding: 1rem;           /* adds breathing space */
+  line-height: 1.8;        /* improves readability */
+  font-size: 1.05rem;      /* slightly larger for comfort */
+  color: #222;             /* soft dark, not full black */
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+  text-align: justify;      /* clean block alignment */
+}
+
+.about-text strong {
+  color: #555;              /* subtle emphasis */
+}
+
+/* ---------- SECTIONS ---------- */
+.section {
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem 0;
+}
+
+/* ---------- FADE-IN ANIMATION ---------- */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* ---------- GALLERY GRID ---------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
 .gallery-grid img {
   width: 100%;
   height: auto;
+  border-radius: 10px;
   cursor: pointer;
   transition: transform 0.2s;
 }
@@ -26,7 +97,15 @@ img {
   transform: scale(1.03);
 }
 
-/* Lightbox overlay for full-screen view */
+/* ---------- IMAGES ---------- */
+img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: block;
+}
+
+/* ---------- LIGHTBOX ---------- */
 .lightbox-overlay {
   position: fixed;
   top: 0;
@@ -44,6 +123,13 @@ img {
 .lightbox-image {
   max-width: 90%;
   max-height: 90%;
+  width: auto;   /* preserves natural aspect ratio */
+  height: auto;  /* preserves natural aspect ratio */
+  object-fit: contain; /* ensures image fits without distortion */
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.lightbox-image {
+  transition: transform 0.3s ease;
 }
