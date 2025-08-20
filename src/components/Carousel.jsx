@@ -16,9 +16,9 @@ export default function Carousel() {
 
   return (
     <div className="carousel">
-      <button onClick={prev}>◀</button>
-      <img src={images[current]} alt={`Artwork ${current + 1}`} />
-      <button onClick={next}>▶</button>
+      <button className="arrow left" onClick={prev}>❮</button>
+      <img className="carousel-image" src={images[current]} alt={`Artwork ${current + 1}`} />
+      <button className="arrow right" onClick={next}>❯</button>
     </div>
   );
 }
