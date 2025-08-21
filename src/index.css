@@ -47,10 +47,13 @@ nav a:hover {
   display: inline-block;
   transform: scale(0.94);
   animation: scaleUp 4s forwards cubic-bezier(0.5, 1, 0.89, 1);
+  white-space: nowrap; /* keep words in one line */
 }
 
-/* Animate each word individually */
+/* Make titles inline */
 .title {
+  display: inline-block; 
+  margin: 0 0.4rem;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.8s forwards;

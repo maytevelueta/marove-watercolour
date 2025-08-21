@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Lightbox from "../components/Lightbox";
-import "./Gallery.css";
 
 export default function Gallery() {
   const images = [

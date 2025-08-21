@@ -16,7 +16,6 @@ export default function Home() {
     <h1 className="title">gallery</h1>
   </div>
       </section>
-
       <section className="section fade-in">
         <Carousel autoPlay={true} />
       </section>
