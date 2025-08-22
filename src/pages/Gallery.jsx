@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import Navbar from "../components/Navbar";
 import Lightbox from "../components/Lightbox";
+import Footer from "../components/Footer";
 
 export default function Gallery() {
   const images = [
@@ -14,6 +16,7 @@ export default function Gallery() {
 
   return (
     <div className="gallery-page">
+      <Navbar />
       <h2>Gallery</h2>
       <div className="gallery-grid">
         {images.map((img, index) => (
@@ -27,6 +30,7 @@ export default function Gallery() {
       </div>
 
       <Lightbox src={selected} onClose={() => setSelected(null)} />
+    <Footer/>
     </div>
   );
 }

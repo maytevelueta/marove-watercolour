@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Carousel from '../components/Carousel';
+import Footer from '../components/Footer';
 import '../index.css';
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <section className="section fade-in">
         <Carousel autoPlay={true} />
       </section>
+      <Footer />
     </>
   );
 }
