@@ -20,11 +20,9 @@ body {
   border-bottom: 1px solid #eee; /* subtle separation */
 }
 
-.navbar .logo {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #111;
-  letter-spacing: 1px;
+.logo a {
+  text-decoration: none;
+  color: inherit;   /* keep same color as text */
 }
 
 .nav-links {
@@ -54,7 +52,7 @@ body {
 .welcome-section {
   text-align: center;
   padding: 15% 0;
-  background: linear-gradient(135deg, #fafafa, #f0f0f0);
+  background: none;
 }
 
 /* Container animation */
