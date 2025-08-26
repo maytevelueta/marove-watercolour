@@ -1,13 +1,10 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
 import Carousel from '../components/Carousel';
-import Footer from '../components/Footer';
 import '../index.css';
 
 export default function Home() {
   return (
     <>
-      <Navbar />
       <section className="welcome-section">
   <div className="home-title">
     <h1 className="title">Welcome</h1>
@@ -20,7 +17,6 @@ export default function Home() {
       <section className="section fade-in">
         <Carousel autoPlay={true} />
       </section>
-      <Footer />
     </>
   );
 }

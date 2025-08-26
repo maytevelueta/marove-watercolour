@@ -7,6 +7,23 @@ body {
   line-height: 1.6;
 }
 
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.App {
+  flex: 1; /* main content grows */
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* pushes footer down */
+}
+
 /* ---------- NAVBAR ---------- */
 .navbar {
   display: flex;
@@ -97,12 +114,11 @@ body {
 
 /* ---------- ABOUT SECTION ---------- */
 .about-text {
-  max-width: 800px;        /* keeps text readable */
-  margin: 2rem auto;       /* centers on the page */
-  padding: 1rem;           /* adds breathing space */
-  line-height: 1.8;        /* improves readability */
-  font-size: 1.05rem;      /* slightly larger for comfort */
-  color: #222;             /* soft dark, not full black */
+  margin: 0 auto;         /* center inside .section */
+  padding: 1rem;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: #222;
 }
 
 .about-text h2 {
@@ -114,11 +130,7 @@ body {
 
 .about-text p {
   margin-bottom: 1rem;
-  text-align: justify;      /* clean block alignment */
-}
-
-.about-text strong {
-  color: #555;              /* subtle emphasis */
+  text-align: justify;
 }
 
 /* ---------- SECTIONS ---------- */
@@ -198,15 +210,10 @@ img {
 
 /* ---------- FOOTER ---------- */
 .footer {
-  background-color: #f9f9f9;
   text-align: center;
   padding: 1rem;
-  margin-top: 3rem;
+  background: #f8f8f8;
+  border-top: 1px solid #ddd;
   font-size: 0.9rem;
-  color: #666;
-  border-top: 1px solid #eee;
-}
-
-.footer p {
-  margin: 0;
+  color: #555;
 }
