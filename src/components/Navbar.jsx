@@ -1,13 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo-black.png"; // adjust path if needed
 
 export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="logo">
         <Link to="/">
-          <img src={logo} alt="Marove Aqua Logo" className="logo-img" />
+          <img src="/images/logo-black.png" alt="Marove Aqua Logo" className="logo-img" />
         </Link>
       </div>
       <ul className="nav-links">
@@ -19,3 +18,4 @@ export default function Navbar() {
     </nav>
   );
 }
+

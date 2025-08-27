@@ -37,8 +37,9 @@ main {
 }
 
 .logo-img {
-  height: 40px;   /* adjust as needed */
-  width: auto;
+  border-radius: 0;  
+  box-shadow: none; 
+  width: 10%;
   cursor: pointer;
 }
 
@@ -64,14 +65,15 @@ main {
 /* ---------- WELCOME SECTION ---------- */
 .welcome-section {
   text-align: center;
-  padding: 15% 0;
+  padding: 10% 0;
   background: none;
 }
 
 /* Container animation */
 .home-title {
-  font-size: 2.8rem;
+  font-size: 4rem;
   font-weight: 500;
+  opacity: 80%;
   display: inline-block;
   transform: scale(0.94);
   animation: scaleUp 4s forwards cubic-bezier(0.5, 1, 0.89, 1);
@@ -80,6 +82,7 @@ main {
 
 /* Make titles inline */
 .title {
+  font-family: 'Dancing Script', cursive;
   display: inline-block; 
   margin: 0 0.4rem;
   opacity: 0;
