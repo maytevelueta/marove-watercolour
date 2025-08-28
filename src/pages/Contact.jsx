@@ -37,7 +37,7 @@ export default function Contact() {
 
   return (
     <div className="section contact-section">
-      <h2>Contact Me</h2>
+      <h2>If you have any enquires, feel free to get in touch!</h2>
       <form className="contact-form" onSubmit={handleSubmit}>
         <input
           type="text"
