@@ -3,31 +3,42 @@ import Lightbox from "../components/Lightbox";
 
 export default function Gallery() {
   const images = [
-    '/images/art1.jpg',
-    '/images/art2.jpg',
-    '/images/art3.jpg',
-    '/images/art4.jpg',
-    '/images/art5.jpg'
+    { src: '/images/art1.jpg', desc: "Watercolour sunset over the sea" },
+    { src: '/images/art2.jpg', desc: "Botanical-inspired composition" },
+    { src: '/images/art3.jpg', desc: "Abstract ocean waves" },
+    { src: '/images/art4.jpg', desc: "Delicate floral detail" },
+    { src: '/images/art5.jpg', desc: "Nature-inspired colour study" }
   ];
 
-  const [selected, setSelected] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState(null);
 
   return (
-    <div className="gallery-page">
+    <div className="section">
       <h2>Gallery</h2>
       <div className="gallery-grid">
         {images.map((img, index) => (
           <img
             key={index}
-            src={img}
+            src={img.src}
             alt={`Artwork ${index + 1}`}
-            onClick={() => setSelected(img)}
+            onClick={() => setSelectedIndex(index)}
           />
         ))}
       </div>
 
-      <Lightbox src={selected} onClose={() => setSelected(null)} />
+      {selectedIndex !== null && (
+        <Lightbox
+          images={images}
+          index={selectedIndex}
+          onClose={() => setSelectedIndex(null)}
+          onPrev={() =>
+            setSelectedIndex((selectedIndex - 1 + images.length) % images.length)
+          }
+          onNext={() =>
+            setSelectedIndex((selectedIndex + 1) % images.length)
+          }
+        />
+      )}
     </div>
   );
 }
-
