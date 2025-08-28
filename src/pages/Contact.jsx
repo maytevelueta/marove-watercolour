@@ -19,10 +19,10 @@ export default function Contact() {
 
     emailjs
       .send(
-        "YOUR_SERVICE_ID",     // from EmailJS
-        "YOUR_TEMPLATE_ID",    // from EmailJS
+        "service_mp95mmb",     // from EmailJS
+        "template_lkf72o6",    // from EmailJS
         formData,
-        "YOUR_PUBLIC_KEY"      // from EmailJS
+        "W4hMrFL5c8e7cdZxY"      // from EmailJS
       )
       .then(
         () => {
