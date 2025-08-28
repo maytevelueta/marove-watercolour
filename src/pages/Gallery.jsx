@@ -3,12 +3,13 @@ import Lightbox from "../components/Lightbox";
 
 export default function Gallery() {
   const images = [
-    { src: '/images/art1.jpg', desc: "Watercolour sunset over the sea" },
-    { src: '/images/art2.jpg', desc: "Botanical-inspired composition" },
-    { src: '/images/art3.jpg', desc: "Abstract ocean waves" },
-    { src: '/images/art4.jpg', desc: "Delicate floral detail" },
-    { src: '/images/art5.jpg', desc: "Nature-inspired colour study" }
-  ];
+  { src: '/images/art1.jpg', desc: "Watercolour sunset over the sea" },
+  { src: '/images/art2.jpg', desc: "Botanical-inspired composition" },
+  { src: '/images/art3.jpg', desc: "Abstract ocean waves" },
+  { src: '/images/art4.jpg', desc: "Delicate floral detail" },
+  { src: '/images/art5.jpg', desc: "Nature-inspired colour study" }
+];
+
 
   const [selectedIndex, setSelectedIndex] = useState(null);
 
