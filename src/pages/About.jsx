@@ -10,7 +10,7 @@ export default function About() {
         <br/>
         <p>My work focuses on botanical illustrations and animal subjects, capturing the delicate details and vibrant textures of the natural world. I'm constantly exploring new techniques and seeking inspiration from nature.</p>
         <br/>
-        <p>If you have any enquiries or would like to commission a custom painting, please don’t hesitate to get in touch—I'd be delighted to create something unique for you!🙂
+        <p>If you have any enquiries or would like to commission a custom painting, please don’t hesitate to get in touch—I'd be delighted to create something unique for you! 🙂
         </p>
       </main>
     </section>
