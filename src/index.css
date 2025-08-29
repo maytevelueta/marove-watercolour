@@ -340,11 +340,18 @@ img {
 
 /* ---------- MOBILE NAV ---------- */
 @media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;        /* keep logo left, hamburger right */
+    justify-content: space-between;
+    align-items: center;        /* vertically aligned */
+    padding: 1rem;
+  }
+
   .nav-links {
-    display: none; /* hide links initially */
+    display: none;
     position: absolute;
-    top: 70px; /* below navbar */
-    right: 5%;
+    top: 70px; 
+    right: 5%; 
     background: white;
     flex-direction: column;
     gap: 1rem;
@@ -358,6 +365,8 @@ img {
   }
 
   .hamburger {
-    display: flex; /* show hamburger only on mobile */
+    display: flex;
+    margin-left: auto;   /* push it all the way right */
   }
 }
+
