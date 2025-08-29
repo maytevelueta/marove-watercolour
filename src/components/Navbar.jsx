@@ -1,21 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import '../index.css';
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="navbar">
-      <div className="logo">
-        <Link to="/">
-          <img src="/images/logo-black.png" alt="Marove Aqua Logo" className="logo-img" />
-        </Link>
-      </div>
-      <ul className="nav-links">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/gallery">Gallery</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
-      </ul>
-    </nav>
+  <img src="/images/logo-black.png" alt="Logo" className="logo-img" />
+
+  {/* Desktop nav links */}
+  <ul className={`nav-links ${isOpen ? "open" : ""}`}>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/gallery">Gallery</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
+
+  {/* Hamburger (mobile only) */}
+  <div
+    className={`hamburger ${isOpen ? "open" : ""}`}
+    onClick={() => setIsOpen(!isOpen)}
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
   );
 }
-
