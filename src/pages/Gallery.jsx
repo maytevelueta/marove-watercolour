@@ -7,7 +7,16 @@ export default function Gallery() {
   { src: '/images/art2.jpg', desc: "Botanical-inspired composition" },
   { src: '/images/art3.jpg', desc: "Abstract ocean waves" },
   { src: '/images/art4.jpg', desc: "Delicate floral detail" },
-  { src: '/images/art5.jpg', desc: "Nature-inspired colour study" }
+  { src: '/images/art5.jpg', desc: "Nature-inspired colour study" },
+  { src: '/images/art6.jpg', desc: "Botanical-inspired composition" },
+  { src: '/images/art7.jpg', desc: "Abstract ocean waves" },
+  { src: '/images/art9.jpg', desc: "Delicate floral detail" },
+  { src: '/images/art10.jpg', desc: "Nature-inspired colour study" },
+  { src: '/images/art11.jpg', desc: "Botanical-inspired composition" },
+  { src: '/images/art12.jpg', desc: "Abstract ocean waves" },
+  { src: '/images/art13.jpg', desc: "Delicate floral detail" },
+  { src: '/images/art14.jpg', desc: "Nature-inspired colour study" },
+  { src: '/images/art15.jpg', desc: "Botanical-inspired composition" }
 ];
 
 
