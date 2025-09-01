@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import '../index.css';
 
 export default function Navbar() {
@@ -11,10 +10,10 @@ export default function Navbar() {
 
   {/* Desktop nav links */}
   <ul className={`nav-links ${isOpen ? "open" : ""}`}>
-    <li><Link href="/">Home</Link></li>
-    <li><Link href="/about">About</Link></li>
-    <li><Link href="/gallery">Gallery</Link></li>
-    <li><Link href="/contact">Contact</Link></li>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/gallery">Gallery</a></li>
+    <li><a href="/contact">Contact</a></li>
   </ul>
 
   {/* Hamburger (mobile only) */}

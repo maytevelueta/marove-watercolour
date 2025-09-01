@@ -368,5 +368,19 @@ img {
     display: flex;
     margin-left: auto;   /* push it all the way right */
   }
+
+  .home-title {
+    white-space: normal; /* allow text to break into multiple lines */
+    text-align: center;
+    font-size: 2.2rem;   /* shrink font for readability */
+    line-height: 1.3;    /* add spacing between wrapped lines */
+  }
+
+  .welcome-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
 }
 
