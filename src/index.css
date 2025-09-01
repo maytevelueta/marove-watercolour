@@ -315,6 +315,20 @@ img {
   border-top: 1px solid #ddd;
   font-size: 0.9rem;
   color: #555;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.instagram-link {
+  color: #111; /* match navbar text color */
+  font-size: 1.5rem; /* size of the icon */
+  transition: color 0.3s ease;
+}
+
+.instagram-link:hover {
+  color: #555; /* subtle hover */
 }
 
 /* ---------- RESPONSIVE BREAKPOINTS ---------- */
