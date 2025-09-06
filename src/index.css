@@ -95,12 +95,13 @@ main {
   text-align: center;
   padding: 10% 5%;
   background: none;
+  opacity: 80%;
 }
 
 .home-title {
   font-size: 4rem;
   font-weight: 500;
-  opacity: 80%;
+  opacity: 90%;
   display: inline-block;
   transform: scale(0.94);
   animation: scaleUp 4s forwards cubic-bezier(0.5, 1, 0.89, 1);
@@ -124,7 +125,7 @@ main {
 
 @keyframes fadeUp {
   to {
-    opacity: 1;
+    opacity: 2;
     transform: translateY(0);
   }
 }
