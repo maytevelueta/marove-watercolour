@@ -39,7 +39,7 @@ main {
 .logo-img {
   border-radius: 0;  
   box-shadow: none; 
-  width: 150px; /* fixed logo size */
+  width: 120px; /* fixed logo size */
   cursor: pointer;
 }
 
