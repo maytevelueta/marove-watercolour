@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import '../index.css';
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="navbar">
+  <Link to="/">
   <img src="/images/logo-black.png" alt="Logo" className="logo-img" />
-
+  </Link>
+  
   {/* Desktop nav links */}
   <ul className={`nav-links ${isOpen ? "open" : ""}`}>
     <li><a href="/">Home</a></li>
