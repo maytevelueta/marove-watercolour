@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from "react-router-dom";
 import Carousel from '../components/Carousel';
 import '../index.css';
 
@@ -15,7 +15,9 @@ export default function Home() {
   </div>
       </section>
       <section className="section fade-in">
+        <Link to="/gallery" className="carousel-link">
         <Carousel autoPlay={true} />
+        </Link>
       </section>
     </>
   );
