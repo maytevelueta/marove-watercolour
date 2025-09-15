@@ -283,6 +283,8 @@ img {
   border-radius: 6px;
   font-size: 1rem;
   width: 100%;
+  font-family: inherit;
+  resize: vertical;  
 }
 
 .contact-form button {
