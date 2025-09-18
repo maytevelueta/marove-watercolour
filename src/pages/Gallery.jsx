@@ -3,9 +3,9 @@ import Lightbox from "../components/Lightbox";
 
 export default function Gallery() {
   const images = [
-  { src: '/images/art1.jpg', desc: "Blueberries / Vaccinium corymbosum. Watercolour on 23 x 31cm Arches hot press paper. " },
-  { src: '/images/art2.jpg', desc: "Watercolour on 23 x 31cm Arches hot press paper." },
-  { src: '/images/art3.jpg', desc: "Watercolour on 23 x 31cm Arches hot press paper." },
+  { src: '/images/art1.jpg', desc: "Blueberries/Vaccinium corymbosum. Watercolour on 23 x 31cm Arches hot press paper. " },
+  { src: '/images/art2.jpg', desc: "Pansy Swiss Giant Blue Blotch/Viola x wittrockiana. Watercolour on 23 x 31cm Arches hot press paper." },
+  { src: '/images/art3.jpg', desc: "Single tulip/Tulipa gesneriana. Watercolour on 23 x 31cm Arches hot press paper." },
   { src: '/images/art4.jpg', desc: "Watercolour on 23 x 31cm Arches hot press paper." },
   { src: '/images/art5.jpg', desc: "Watercolour on 23 x 31cm Arches hot press paper." },
  /* { src: '/images/art6.jpg', desc: "Botanical-inspired composition" },*/
