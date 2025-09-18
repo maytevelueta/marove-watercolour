@@ -12,12 +12,12 @@ export default function Gallery() {
   { src: '/images/art7.jpg', desc: "Benton Lorna/Iris x germanica. Watercolour on 46 x 61cm Arches hot press paper." },
   { src: '/images/art8.jpg', desc: "Common octopus/Octopus vulgaris. DWatercolour on 23 x 31cm Arches hot press paper." },
   { src: '/images/art9.jpg', desc: "Hydrangea/Hydrangea macrophylla. Watercolour on 23 x 31cm Arches hot press paper." },
-  { src: '/images/art10.jpg', desc: "Purple bearded iris/Iris x germanica. Magnolia/Magnolia x soulangeana. Watercolour on 23 x 31cm Arches hot press paper." },
-  { src: '/images/art11.jpg', desc: "Daffodil/Narcissus. Watercolour on 23 x 31cm Arches hot press paper." },
-  { src: '/images/art12.jpg', desc: "Radishes/Raphanus sativus. Watercolour on 23 x 31cm Fabriano cold press paper." },
-  { src: '/images/art13.jpg', desc: "Passion fruit/Passiflora edulis Sims. Watercolour on 23 x 31cm Fabriano cold press paper." },
-  { src: '/images/art14.jpg', desc: "Hollyhock/Alcea, common hollyhock. Watercolour on 23 x 31cm Fabriano cold press paper." },
-  { src: '/images/art15.jpg', desc: "Radishes/Raphanus sativus. Watercolour on 23 x 31cm Fabriano cold press paper." }
+  { src: '/images/art10.jpg', desc: "Magnolia/Magnolia x soulangeana. Watercolour on 23 x 31cm Arches hot press paper." },
+  { src: '/images/art11.jpg', desc: "Purple bearded iris/Iris x germanica. Watercolour on 23 x 31cm Arches hot press paper."},
+  { src: '/images/art12.jpg', desc: "Daffodil/Narcissus. Watercolour on 23 x 31cm Arches hot press paper." },
+  { src: '/images/art13.jpg', desc: "Radishes/Raphanus sativus. Watercolour on 23 x 31cm Fabriano cold press paper." },
+  { src: '/images/art14.jpg', desc: "Passion fruit/Passiflora edulis Sims. Watercolour on 23 x 31cm Fabriano cold press paper." },
+  { src: '/images/art15.jpg', desc: "Hollyhock/Alcea, common hollyhock. Watercolour on 23 x 31cm Fabriano cold press paper." }
 ];
 
 
