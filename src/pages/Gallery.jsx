@@ -3,21 +3,21 @@ import Lightbox from "../components/Lightbox";
 
 export default function Gallery() {
   const images = [
-  { src: '/images/art1.jpg', desc: "Blueberries / Vaccinium corymbosum. Watercolour on hot press paper. " },
-  { src: '/images/art2.jpg', desc: "Botanical-inspired composition" },
-  { src: '/images/art3.jpg', desc: "Abstract ocean waves" },
-  { src: '/images/art4.jpg', desc: "Delicate floral detail" },
-  { src: '/images/art5.jpg', desc: "Nature-inspired colour study" },
+  { src: '/images/art1.jpg', desc: "Blueberries / Vaccinium corymbosum. Watercolour on 23 x 31cm Arches hot press paper. " },
+  { src: '/images/art2.jpg', desc: "Watercolour on 23 x 31cm Arches hot press paper." },
+  { src: '/images/art3.jpg', desc: "Watercolour on 23 x 31cm Arches hot press paper." },
+  { src: '/images/art4.jpg', desc: "Watercolour on 23 x 31cm Arches hot press paper." },
+  { src: '/images/art5.jpg', desc: "Watercolour on 23 x 31cm Arches hot press paper." },
  /* { src: '/images/art6.jpg', desc: "Botanical-inspired composition" },*/
-  { src: '/images/art7.jpg', desc: "Abstract ocean waves" },
-  { src: '/images/art8.jpg', desc: "Delicate floral detail" },
-  { src: '/images/art9.jpg', desc: "Delicate floral detail" },
-  { src: '/images/art10.jpg', desc: "Nature-inspired colour study" },
-  { src: '/images/art11.jpg', desc: "Botanical-inspired composition" },
-  { src: '/images/art12.jpg', desc: "Abstract ocean waves" },
-  { src: '/images/art13.jpg', desc: "Delicate floral detail" },
-  { src: '/images/art14.jpg', desc: "Nature-inspired colour study" },
-  { src: '/images/art15.jpg', desc: "Botanical-inspired composition" }
+  { src: '/images/art7.jpg', desc: "Watercolour on 23 x 31cm Arches hot press paper." },
+  { src: '/images/art8.jpg', desc: "DWatercolour on 23 x 31cm Arches hot press paper." },
+  { src: '/images/art9.jpg', desc: "Watercolour on 23 x 31cm Arches hot press paper." },
+  { src: '/images/art10.jpg', desc: "Watercolour on 23 x 31cm Arches hot press paper." },
+  { src: '/images/art11.jpg', desc: "BWatercolour on 23 x 31cm Arches hot press paper." },
+  { src: '/images/art12.jpg', desc: "Watercolour on 23 x 31cm Arches hot press paper." },
+  { src: '/images/art13.jpg', desc: "Watercolour on 23 x 31cm Arches hot press paper." },
+  { src: '/images/art14.jpg', desc: "Watercolour on 23 x 31cm Arches hot press paper." },
+  { src: '/images/art15.jpg', desc: "Watercolour on 23 x 31cm Arches hot press paper." }
 ];
 
 
