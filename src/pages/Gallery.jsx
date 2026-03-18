@@ -10,7 +10,7 @@ export default function Gallery() {
   { src: '/images/art5.jpg', desc: "Paperflower / Bougainvilea glabra. Watercolour on 23 x 31cm Arches hot press paper." },
  /* { src: '/images/art6.jpg', desc: "Botanical-inspired composition" },*/
   { src: '/images/art7.jpg', desc: "Benton Lorna / Iris x germanica. Watercolour on 46 x 61cm Arches hot press paper." },
-  { src: '/images/art8.jpg', desc: "Common octopus / Octopus vulgaris. DWatercolour on 23 x 31cm Arches hot press paper." },
+  { src: '/images/art8.jpg', desc: "Common octopus / Octopus vulgaris. Watercolour on 23 x 31cm Arches hot press paper." },
   { src: '/images/art9.jpg', desc: "Hydrangea / Hydrangea macrophylla. Watercolour on 23 x 31cm Arches hot press paper." },
   { src: '/images/art10.jpg', desc: "Magnolia / Magnolia x soulangeana. Watercolour on 23 x 31cm Arches hot press paper." },
   { src: '/images/art11.jpg', desc: "Purple bearded iris / Iris x germanica. Watercolour on 23 x 31cm Arches hot press paper."},
