@@ -18,7 +18,11 @@ export default function Gallery() {
   { src: '/images/art13.jpg', desc: "Radishes / Raphanus sativus. Watercolour on 23 x 31cm Fabriano cold press paper." },
   { src: '/images/art14.jpg', desc: "Passion fruit / Passiflora edulis Sims. Watercolour on 23 x 31cm Fabriano cold press paper." },
   { src: '/images/art15.jpg', desc: "Hollyhock / Alcea, common hollyhock. Watercolour on 23 x 31cm Fabriano cold press paper." },
-  { src: '/images/art16.jpg', desc: "Kingfisher / Alcedo atthis. Watercolour on 23 x 31cm Fabriano cold press paper." }
+  { src: '/images/art16.jpg', desc: "Kingfisher / Alcedo atthis. Watercolour on 23 x 31cm Fabriano cold press paper." },
+  { src: '/images/art17.jpg', desc: "Radishes / Raphanus sativus. Watercolour on 23 x 31cm Fabriano cold press paper." },
+  { src: '/images/art18.jpg', desc: "Passion fruit / Passiflora edulis Sims. Watercolour on 23 x 31cm Fabriano cold press paper." },
+  { src: '/images/art19.jpg', desc: "Hollyhock / Alcea, common hollyhock. Watercolour on 23 x 31cm Fabriano cold press paper." },
+  { src: '/images/art20.jpg', desc: "Kingfisher / Alcedo atthis. Watercolour on 23 x 31cm Fabriano cold press paper." }
 ];
 
 
