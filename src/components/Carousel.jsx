@@ -18,7 +18,11 @@ export default function Carousel() {
     '/images/art13.jpg',
     '/images/art14.jpg',
     '/images/art15.jpg',
-    '/images/art16.jpg'
+    '/images/art16.jpg',
+    '/images/art17.jpg',
+    '/images/art18.jpg',
+    '/images/art19.jpg',
+    '/images/art20.jpg'
   ];
 
   // Duplicate the images array for smooth looping
