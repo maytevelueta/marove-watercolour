@@ -7,14 +7,15 @@
 .carousel-track {
   display: flex;
   gap: 1rem;
-  animation: scroll 20s linear infinite;
+  width: max-content; 
+  animation: scroll 30s linear infinite; 
 }
 
 .carousel-track img {
-  width: 150px; /* smaller size */
+  width: 150px;
+  flex-shrink: 0; /* prevents glitch */
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .carousel-link {
@@ -24,6 +25,14 @@
 }
 
 @keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* half because we duplicated images */
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.carousel-wrapper:hover .carousel-track {
+  animation-play-state: paused;
 }

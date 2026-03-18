@@ -99,8 +99,8 @@ main {
 }
 
 .home-title {
-  font-size: 4rem;
-  font-weight: 500;
+  font-size: 3rem;
+  font-weight: 400;
   opacity: 90%;
   display: inline-block;
   transform: scale(0.94);
