@@ -395,6 +395,8 @@ html, body {
   }
 }
 
+/* Tablet and smaller devices */
+@media (max-width: 768px) {
   .nav-links {
     display: none;
     position: absolute;
@@ -429,6 +431,5 @@ html, body {
     flex-wrap: wrap;
     justify-content: center;
   }
-
 }
 
