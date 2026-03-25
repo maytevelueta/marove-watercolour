@@ -410,6 +410,21 @@ html, body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
 
+  /* ---------- FONT FIX FOR CROOKED "r" ---------- */
+@media (max-width: 480px) {
+  .title {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-weight: 300 !important;
+    letter-spacing: 0.02em; /* Prevents letter squishing */
+  }
+  
+  .home-title {
+    font-weight: 300 !important; /* Lighter weight renders cleaner */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
   .nav-links.open {
     display: flex;
   }
