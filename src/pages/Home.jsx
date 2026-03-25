@@ -6,7 +6,9 @@ export default function Home() {
   return (
     <>
       <section className="welcome-section">
-        <h1 className="home-title">Welcome to my virtual gallery</h1>
+        <div className="home-title-wrap">
+          <h1 className="home-title">Welcome to my virtual gallery</h1>
+        </div>
       </section>
 
       <section className="section fade-in">
