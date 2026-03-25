@@ -145,15 +145,21 @@ main {
 
 /* ---------- WELCOME SECTION ---------- */
 .welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 10% 5%;
+  padding: 8% 5%;
+  min-height: 50vh; /* centers vertically on large screens */
 }
 
 .home-title {
-  font-size: 3rem;
+  font-size: clamp(2.5rem, 5vw, 4rem); /* scales between 2.5rem and 4rem based on viewport */
   font-weight: 400;
   display: inline-block;
   transform: scale(0.94);
+  white-space: nowrap; /* keep on one line on large screens */
   animation: scaleUp 4s forwards cubic-bezier(0.5, 1, 0.89, 1);
 }
 
