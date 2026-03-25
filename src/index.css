@@ -194,7 +194,7 @@ main {
 .about-text {
   max-width: 700px;
   margin: 0 auto;
-  text-align: center;
+  text-align: justify;
   line-height: 1.9;
 }
 
@@ -364,7 +364,7 @@ main {
 }
 
 .contact-button {
-  align-self: flex-start;
+  align-self: flex-center;
   border: 0;
   border-radius: 999px;
   background: #111;
