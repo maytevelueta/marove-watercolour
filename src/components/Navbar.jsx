@@ -6,29 +6,38 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="navbar">
-  <Link to="/">
-  <img src="/images/logo-black.png" alt="Logo" className="logo-img" />
-  </Link>
-  
-  {/* Desktop nav links */}
-  <ul className={`nav-links ${isOpen ? "open" : ""}`}>
-  <li><a href="/" onClick={() => setIsOpen(false)}>Home</a></li>
-  <li><a href="/about" onClick={() => setIsOpen(false)}>About</a></li>
-  <li><a href="/gallery" onClick={() => setIsOpen(false)}>Gallery</a></li>
-  <li><a href="/contact" onClick={() => setIsOpen(false)}>Contact</a></li>
-</ul>
+    <>
+      <nav className="navbar">
+        <Link to="/">
+          <img src="/images/logo-black.png" alt="Logo" className="logo-img" />
+        </Link>
 
-  {/* Hamburger (mobile only) */}
-  <div
-    className={`hamburger ${isOpen ? "open" : ""}`}
-    onClick={() => setIsOpen(!isOpen)}
-  >
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</nav>
+        {/* Nav Links */}
+        <ul className={`nav-links ${isOpen ? "open" : ""}`}>
+          <li><Link to="/" onClick={() => setIsOpen(false)}>Home</Link></li>
+          <li><Link to="/about" onClick={() => setIsOpen(false)}>About</Link></li>
+          <li><Link to="/gallery" onClick={() => setIsOpen(false)}>Gallery</Link></li>
+          <li><Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
+        </ul>
 
+        {/* Hamburger */}
+        <div
+          className={`hamburger ${isOpen ? "open" : ""}`}
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
+      {/* Overlay */}
+      {isOpen && (
+        <div
+          className="nav-overlay open"
+          onClick={() => setIsOpen(false)}
+        />
+      )}
+    </>
   );
 }
