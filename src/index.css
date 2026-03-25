@@ -33,7 +33,7 @@ main {
   background-color: #fff;
   position: sticky;
   top: 0;
-  z-index: 500;
+  z-index: 1000; /* increased to sit above everything */
 }
 
 .logo-img {
@@ -68,7 +68,7 @@ main {
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
-  z-index: 600;
+  z-index: 1100; /* always on top */
 }
 
 .hamburger span {
@@ -111,7 +111,7 @@ main {
     background: #fff;
     box-shadow: -5px 0 15px rgba(0,0,0,0.1);
     transition: right 0.4s ease;
-    z-index: 550;
+    z-index: 1050; /* below hamburger but above overlay */
   }
 
   .nav-links.open {
@@ -128,7 +128,7 @@ main {
     opacity: 0;
     pointer-events: none;
     transition: background 0.4s ease, opacity 0.4s ease;
-    z-index: 500;
+    z-index: 1000; /* under menu and hamburger */
   }
 
   .nav-overlay.open {
@@ -145,7 +145,7 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 8% 5%;
+  padding: 8% 10%; /* added more horizontal padding for large screens */
   min-height: 60vh;
 }
 
@@ -237,9 +237,10 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 500px; /* limits elongation */
-  margin: 0 auto; /* centers on page */
+  max-width: 500px;
+  margin: 0 auto;
   padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 /* ---------- FOOTER ---------- */
