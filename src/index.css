@@ -95,6 +95,16 @@ main {
 //* ---------- MOBILE MENU (SLIDE-IN WITH FADE OVERLAY) ---------- */
 @media (max-width: 768px) {
 
+  .navbar {
+    display: flex;
+    justify-content: space-between; /* logo left, hamburger right */
+    align-items: center;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 300; /* navbar above content */
+  }
+
   .hamburger {
     display: flex;
     z-index: 300; /* always on top */
