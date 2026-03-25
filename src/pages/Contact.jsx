@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import "../index.css";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: ""
+    message: "",
   });
-
   const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
   };
 
   const handleSubmit = (e) => {
@@ -19,14 +22,14 @@ export default function Contact() {
 
     emailjs
       .send(
-        "service_mp95mmb",     // from EmailJS
-        "template_lkf72o6",    // from EmailJS
+        "service_mp95mmb",
+        "template_lkf72o6",
         formData,
-        "W4hMrFL5c8e7cdZxY"      // from EmailJS
+        "W4hMrFL5c8e7cdZxY"
       )
       .then(
         () => {
-          setStatus("Message sent! Thank you 💌");
+          setStatus("Message sent. Thank you!");
           setFormData({ name: "", email: "", message: "" });
         },
         () => {
@@ -36,36 +39,54 @@ export default function Contact() {
   };
 
   return (
-    <div className="section contact-section">
-      <h3>If you have any enquires, feel free to get in touch! 🎨🖌️</h3>
-      <form className="contact-form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Your name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Your email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-        <textarea
-          name="message"
-          placeholder="Your message"
-          rows="5"
-          value={formData.message}
-          onChange={handleChange}
-          required
-        />
-        <button type="submit">Send</button>
-      </form>
-      {status && <p className="status">{status}</p>}
-    </div>
+    <section className="section contact-section">
+      <div className="contact-card">
+        <h1 className="contact-title">Get in touch</h1>
+        <p className="contact-intro">
+          If you have any enquiries, feel free to send me a message.
+        </p>
+
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <label htmlFor="name" className="sr-only">Name</label>
+          <input
+            id="name"
+            type="text"
+            name="name"
+            placeholder="Your name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+
+          <label htmlFor="email" className="sr-only">Email</label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="Your email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+
+          <label htmlFor="message" className="sr-only">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Your message"
+            rows="6"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          />
+
+          <button className="contact-button" type="submit">
+            Send
+          </button>
+        </form>
+
+        {status && <p className="status">{status}</p>}
+      </div>
+    </section>
   );
 }
