@@ -362,16 +362,30 @@ gap: 1rem;
 
 /* ---------- MOBILE NAV ---------- */
 @media (max-width: 768px) {
-.navbar {
-flex-direction: row; /* keep logo left, hamburger right */
-justify-content: space-between;
-align-items: center; /* vertically aligned */
-padding: 1rem;
+  .nav-links {
+    display: none;              
+    position: absolute;
+    top: 70px;
+    right: 0;
+    flex-direction: column;
+    background: white;
+    width: 100%;
+    padding: 1rem 0;
+    gap: 1rem;
+    text-align: center;
+    z-index: 99;
+  }
+
+ .nav-links {
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: all 0.3s ease;
 }
 
-  .nav-links.open {
-    display: flex;
-  }
+.nav-links.open {
+  transform: translateY(0);
+  opacity: 1;
+}
 
   .hamburger {
     display: flex;
