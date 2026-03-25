@@ -106,8 +106,31 @@ main {
   }
 
   .hamburger {
-    display: flex;
-    z-index: 300; /* always on top */
+    display: flex; /* make it visible */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 320; /* above menu + overlay */
+  }
+
+   .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #111;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+
+  .hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
   }
 
   /* slide-in menu */
