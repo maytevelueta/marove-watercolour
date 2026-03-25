@@ -186,29 +186,20 @@ main {
   padding-bottom: 4rem;
 }
 
-.about-card {
-  width: min(100%, 850px);
-  margin: 0 auto;
-  background: #fff;
-  border: 1px solid rgba(17, 17, 17, 0.08);
-  border-radius: 18px;
-  padding: clamp(1.5rem, 3vw, 2.5rem);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.05);
-}
-
 .page-title {
-  margin: 0 0 1rem;
+  margin: 0 0 2rem;
   text-align: center;
 }
 
 .about-text {
-  max-width: 720px;
+  max-width: 700px;
   margin: 0 auto;
-  line-height: 1.85;
+  text-align: center;
+  line-height: 1.9;
 }
 
 .about-text p {
-  margin: 0 0 1.2rem;
+  margin: 0 0 1.4rem;
 }
 
 /* ========= GALLERY ========= */
@@ -404,9 +395,12 @@ main {
   margin: 0 auto;
   min-height: 72px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  justify-content: center;
+  gap: 0.6rem;
+  text-align: center;
+  padding: 1rem 0;
 }
 
 .footer-inner p {
@@ -418,6 +412,7 @@ main {
   font-size: 1.4rem;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
 }
 
 /* ========= ACCESSIBILITY ========= */

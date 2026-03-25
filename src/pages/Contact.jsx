@@ -29,7 +29,7 @@ export default function Contact() {
       )
       .then(
         () => {
-          setStatus("Message sent. Thank you!");
+          setStatus("Message sent ✨ Thank you!");
           setFormData({ name: "", email: "", message: "" });
         },
         () => {
@@ -41,7 +41,7 @@ export default function Contact() {
   return (
     <section className="section contact-section">
       <div className="contact-card">
-        <h1 className="contact-title">Get in touch</h1>
+        <h1 className="contact-title">Get in touch 💌</h1>
         <p className="contact-intro">
           If you have any enquiries, feel free to send me a message.
         </p>
@@ -52,7 +52,7 @@ export default function Contact() {
             id="name"
             type="text"
             name="name"
-            placeholder="Your name"
+            placeholder="Your name ✨"
             value={formData.name}
             onChange={handleChange}
             required
@@ -63,7 +63,7 @@ export default function Contact() {
             id="email"
             type="email"
             name="email"
-            placeholder="Your email"
+            placeholder="Your email 📩"
             value={formData.email}
             onChange={handleChange}
             required
@@ -73,7 +73,7 @@ export default function Contact() {
           <textarea
             id="message"
             name="message"
-            placeholder="Your message"
+            placeholder="Your message 🌷"
             rows="6"
             value={formData.message}
             onChange={handleChange}
@@ -81,7 +81,7 @@ export default function Contact() {
           />
 
           <button className="contact-button" type="submit">
-            Send
+            Send ✨
           </button>
         </form>
 
