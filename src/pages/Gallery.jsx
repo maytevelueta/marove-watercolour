@@ -32,7 +32,7 @@ export default function Gallery() {
       <div className="gallery-header">
         <h1 className="page-title">Gallery</h1>
         <p className="gallery-intro">
-          A selection of botanical and wildlife watercolour paintings.
+          A glimpse into my latest work.
         </p>
       </div>
 
@@ -61,6 +61,9 @@ export default function Gallery() {
           onNext={() => setSelectedIndex((selectedIndex + 1) % images.length)}
         />
       )}
+      <p className="gallery-intro">
+         Please note that not all pieces are available for sale, but if you're interested in any of them or would like to commission a custom painting, feel free to contact me.
+        </p>
     </section>
   );
 }
