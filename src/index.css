@@ -343,16 +343,6 @@ html, body {
   overflow-x: hidden; /* No horizontal scroll on iPhone */
 }
 
-@media (max-width: 480px) {
-  .title {
-    font-size: 1.6rem !important;  /* Slightly larger for legibility */
-    -webkit-font-smoothing: antialiased !important;
-    -moz-osx-font-smoothing: grayscale !important;
-    text-rendering: optimizeLegibility !important;
-    transform: scale(1.02);  /* Micro-adjust for iPhone pixel alignment */
-  }
-}
-
 /* iPhone SE (320px) and up */
 @media (max-width: 480px) {
   .navbar {
