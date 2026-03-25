@@ -1,44 +1,52 @@
 import React, { useState } from "react";
 import Lightbox from "../components/Lightbox";
+import "../index.css";
 
-export default function Gallery() {
-  const images = [
-  { src: '/images/art1.jpg', desc: "Blueberries / Vaccinium corymbosum. Watercolour on 23 x 31cm Arches hot press paper. " },
-  { src: '/images/art2.jpg', desc: "Pansy Swiss Giant Blue Blotch/Viola x wittrockiana. Watercolour on 23 x 31cm Arches hot press paper." },
-  { src: '/images/art3.jpg', desc: "Single tulip / Tulipa gesneriana. Watercolour on 23 x 31cm Arches hot press paper." },
-  { src: '/images/art4.jpg', desc: "Camellia / Camellia japonica. Watercolour on 23 x 31cm Arches hot press paper." },
-  { src: '/images/art5.jpg', desc: "Paperflower / Bougainvilea glabra. Watercolour on 23 x 31cm Arches hot press paper." },
- /* { src: '/images/art6.jpg', desc: "Botanical-inspired composition" },*/
-  { src: '/images/art7.jpg', desc: "Benton Lorna / Iris x germanica. Watercolour on 46 x 61cm Arches hot press paper." },
-  { src: '/images/art8.jpg', desc: "Common octopus / Octopus vulgaris. Watercolour on 23 x 31cm Arches hot press paper." },
-  { src: '/images/art9.jpg', desc: "Hydrangea / Hydrangea macrophylla. Watercolour on 23 x 31cm Arches hot press paper." },
-  { src: '/images/art10.jpg', desc: "Magnolia / Magnolia x soulangeana. Watercolour on 23 x 31cm Arches hot press paper." },
-  { src: '/images/art11.jpg', desc: "Purple bearded iris / Iris x germanica. Watercolour on 23 x 31cm Arches hot press paper."},
-  { src: '/images/art12.jpg', desc: "Daffodil / Narcissus. Watercolour on 23 x 31cm Arches hot press paper." },
-  { src: '/images/art13.jpg', desc: "Radishes / Raphanus sativus. Watercolour on 23 x 31cm Fabriano cold press paper." },
-  { src: '/images/art14.jpg', desc: "Passion fruit / Passiflora edulis Sims. Watercolour on 23 x 31cm Fabriano cold press paper." },
-  { src: '/images/art15.jpg', desc: "Hollyhock / Alcea, common hollyhock. Watercolour on 23 x 31cm Fabriano cold press paper." },
-  { src: '/images/art16.jpg', desc: "Kingfisher / Alcedo atthis. Watercolour on 23 x 31cm Fabriano cold press paper." },
-  { src: '/images/art17.jpg', desc: "Radishes / Raphanus sativus. Watercolour on 23 x 31cm Fabriano cold press paper." },
-  { src: '/images/art18.jpg', desc: "Passion fruit / Passiflora edulis Sims. Watercolour on 23 x 31cm Fabriano cold press paper." },
-  { src: '/images/art19.jpg', desc: "Hollyhock / Alcea, common hollyhock. Watercolour on 23 x 31cm Fabriano cold press paper." },
-  { src: '/images/art20.jpg', desc: "Kingfisher / Alcedo atthis. Watercolour on 23 x 31cm Fabriano cold press paper." }
+const images = [
+  { src: "/images/art1.jpg", desc: "Blueberries / Vaccinium corymbosum. Watercolour on 23 x 31cm Arches hot press paper." },
+  { src: "/images/art2.jpg", desc: "Pansy Swiss Giant Blue Blotch / Viola x wittrockiana. Watercolour on 23 x 31cm Arches hot press paper." },
+  { src: "/images/art3.jpg", desc: "Single tulip / Tulipa gesneriana. Watercolour on 23 x 31cm Arches hot press paper." },
+  { src: "/images/art4.jpg", desc: "Camellia / Camellia japonica. Watercolour on 23 x 31cm Arches hot press paper." },
+  { src: "/images/art5.jpg", desc: "Paperflower / Bougainvillea glabra. Watercolour on 23 x 31cm Arches hot press paper." },
+  { src: "/images/art7.jpg", desc: "Benton Lorna / Iris x germanica. Watercolour on 46 x 61cm Arches hot press paper." },
+  { src: "/images/art8.jpg", desc: "Common octopus / Octopus vulgaris. Watercolour on 23 x 31cm Arches hot press paper." },
+  { src: "/images/art9.jpg", desc: "Hydrangea / Hydrangea macrophylla. Watercolour on 23 x 31cm Arches hot press paper." },
+  { src: "/images/art10.jpg", desc: "Magnolia / Magnolia x soulangeana. Watercolour on 23 x 31cm Arches hot press paper." },
+  { src: "/images/art11.jpg", desc: "Purple bearded iris / Iris x germanica. Watercolour on 23 x 31cm Arches hot press paper." },
+  { src: "/images/art12.jpg", desc: "Daffodil / Narcissus. Watercolour on 23 x 31cm Arches hot press paper." },
+  { src: "/images/art13.jpg", desc: "Radishes / Raphanus sativus. Watercolour on 23 x 31cm Fabriano cold press paper." },
+  { src: "/images/art14.jpg", desc: "Passion fruit / Passiflora edulis Sims. Watercolour on 23 x 31cm Fabriano cold press paper." },
+  { src: "/images/art15.jpg", desc: "Hollyhock / Alcea, common hollyhock. Watercolour on 23 x 31cm Fabriano cold press paper." },
+  { src: "/images/art16.jpg", desc: "Kingfisher / Alcedo atthis. Watercolour on 23 x 31cm Fabriano cold press paper." },
+  { src: "/images/art17.jpg", desc: "Radishes / Raphanus sativus. Watercolour on 23 x 31cm Fabriano cold press paper." },
+  { src: "/images/art18.jpg", desc: "Passion fruit / Passiflora edulis Sims. Watercolour on 23 x 31cm Fabriano cold press paper." },
+  { src: "/images/art19.jpg", desc: "Hollyhock / Alcea, common hollyhock. Watercolour on 23 x 31cm Fabriano cold press paper." },
+  { src: "/images/art20.jpg", desc: "Kingfisher / Alcedo atthis. Watercolour on 23 x 31cm Fabriano cold press paper." },
 ];
 
-
+export default function Gallery() {
   const [selectedIndex, setSelectedIndex] = useState(null);
 
   return (
-    <div className="section">
-      <h2>Gallery</h2>
+    <section className="section gallery-section">
+      <div className="gallery-header">
+        <h1 className="page-title">Gallery</h1>
+        <p className="gallery-intro">
+          A selection of botanical and wildlife watercolour paintings.
+        </p>
+      </div>
+
       <div className="gallery-grid">
         {images.map((img, index) => (
-          <img
-            key={index}
-            src={img.src}
-            alt={`Artwork ${index + 1}`}
+          <button
+            key={img.src}
+            type="button"
+            className="gallery-item"
             onClick={() => setSelectedIndex(index)}
-          />
+            aria-label={`Open artwork ${index + 1}`}
+          >
+            <img src={img.src} alt={img.desc} />
+          </button>
         ))}
       </div>
 
@@ -50,11 +58,9 @@ export default function Gallery() {
           onPrev={() =>
             setSelectedIndex((selectedIndex - 1 + images.length) % images.length)
           }
-          onNext={() =>
-            setSelectedIndex((selectedIndex + 1) % images.length)
-          }
+          onNext={() => setSelectedIndex((selectedIndex + 1) % images.length)}
         />
       )}
-    </div>
+    </section>
   );
 }

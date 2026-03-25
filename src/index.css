@@ -1,4 +1,4 @@
-/* ---------- GLOBAL STYLES ---------- */
+/* ========= GLOBAL ========= */
 * {
   box-sizing: border-box;
 }
@@ -19,11 +19,23 @@ body {
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 img {
   max-width: 100%;
   display: block;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
 }
 
 main {
@@ -36,7 +48,7 @@ main {
   padding: 3rem 0;
 }
 
-/* ---------- NAVBAR ---------- */
+/* ========= NAVBAR ========= */
 .site-header {
   position: sticky;
   top: 0;
@@ -65,6 +77,7 @@ main {
 .logo-img {
   width: 120px;
   height: auto;
+  display: block;
 }
 
 .nav-links {
@@ -85,6 +98,7 @@ main {
   font-weight: 500;
   font-size: 0.98rem;
   letter-spacing: 0.02em;
+  transition: opacity 0.2s ease;
 }
 
 .nav-links a:hover {
@@ -130,46 +144,7 @@ main {
   display: none;
 }
 
-@media (max-width: 768px) {
-  .hamburger {
-    display: inline-flex;
-  }
-
-  .nav-links {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: min(82vw, 320px);
-    height: 100vh;
-    background: #fff;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2rem;
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.12);
-    transition: right 0.3s ease;
-    z-index: 1250;
-  }
-
-  .nav-links.open {
-    right: 0;
-  }
-
-  .nav-links a {
-    font-size: 1.1rem;
-  }
-
-  .nav-overlay {
-    display: block;
-    position: fixed;
-    inset: 0;
-    border: 0;
-    background: rgba(0, 0, 0, 0.28);
-    z-index: 1240;
-    cursor: pointer;
-  }
-}
-
-/* ---------- HOME ---------- */
+/* ========= HOME ========= */
 .welcome-section {
   min-height: calc(70vh - 76px);
   display: flex;
@@ -198,13 +173,144 @@ main {
   }
 }
 
-@media (max-width: 900px) {
-  .home-title {
-    white-space: normal;
-  }
+/* ========= ABOUT ========= */
+.about-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
-/* ---------- CONTACT ---------- */
+.about-card {
+  width: min(100%, 850px);
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 18px;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.05);
+}
+
+.page-title {
+  margin: 0 0 1rem;
+  text-align: center;
+}
+
+.about-text {
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.85;
+}
+
+.about-text p {
+  margin: 0 0 1.2rem;
+}
+
+/* ========= GALLERY ========= */
+.gallery-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.gallery-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.gallery-intro {
+  margin: 0;
+  color: #555;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.gallery-item {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.02);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* ========= LIGHTBOX ========= */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  z-index: 2000;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 960px;
+  width: 100%;
+  text-align: center;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 75vh;
+  border-radius: 14px;
+}
+
+.lightbox-desc {
+  color: #fff;
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+.lightbox-close,
+.lightbox-nav {
+  position: absolute;
+  border: 0;
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 999px;
+}
+
+.lightbox-close {
+  top: -0.75rem;
+  right: -0.25rem;
+  width: 42px;
+  height: 42px;
+  font-size: 1.5rem;
+}
+
+.lightbox-nav {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  font-size: 1.5rem;
+}
+
+.lightbox-nav.left {
+  left: -3.5rem;
+}
+
+.lightbox-nav.right {
+  right: -3.5rem;
+}
+
+/* ========= CONTACT ========= */
 .contact-section {
   display: flex;
   justify-content: center;
@@ -245,7 +351,6 @@ main {
   border: 1px solid rgba(17, 17, 17, 0.18);
   border-radius: 12px;
   padding: 0.95rem 1rem;
-  font: inherit;
   background: #fff;
 }
 
@@ -267,8 +372,8 @@ main {
   background: #111;
   color: #fff;
   padding: 0.8rem 1.4rem;
-  font: inherit;
   cursor: pointer;
+  transition: opacity 0.2s ease;
 }
 
 .contact-button:hover {
@@ -280,6 +385,35 @@ main {
   text-align: center;
 }
 
+/* ========= FOOTER ========= */
+.footer {
+  margin-top: auto;
+  border-top: 1px solid rgba(17, 17, 17, 0.08);
+  background: #fafafa;
+}
+
+.footer-inner {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer-inner p {
+  margin: 0;
+  color: #444;
+}
+
+.footer-social {
+  font-size: 1.4rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ========= ACCESSIBILITY ========= */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -290,4 +424,65 @@ main {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+/* ========= MOBILE ========= */
+@media (max-width: 900px) {
+  .home-title {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: inline-flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: min(82vw, 320px);
+    height: 100vh;
+    background: #fff;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.12);
+    transition: right 0.3s ease;
+    z-index: 1250;
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+  }
+
+  .nav-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    border: 0;
+    background: rgba(0, 0, 0, 0.28);
+    z-index: 1240;
+    cursor: pointer;
+  }
+
+  .lightbox-nav.left {
+    left: 0.5rem;
+  }
+
+  .lightbox-nav.right {
+    right: 0.5rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 0;
+    text-align: center;
+  }
 }

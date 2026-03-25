@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
+import "../index.css";
 
 export default function Lightbox({ images, index, onClose, onPrev, onNext }) {
-  // Keyboard navigation must always be set
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === "ArrowLeft") onPrev();
@@ -13,36 +13,29 @@ export default function Lightbox({ images, index, onClose, onPrev, onNext }) {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [onPrev, onNext, onClose]);
 
-  // 🟢 Only render if an image is selected
   if (index === null) return null;
 
   const { src, desc } = images[index];
 
   return (
     <div className="lightbox-overlay" onClick={onClose}>
-      <span
-        className="lightbox-arrow left"
-        onClick={(e) => {
-          e.stopPropagation();
-          onPrev();
-        }}
-      >
-        &#10094;
-      </span>
+      <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+        <button type="button" className="lightbox-close" onClick={onClose} aria-label="Close image">
+          ×
+        </button>
 
-      <img src={src} alt="Artwork" className="lightbox-image" />
+        <button type="button" className="lightbox-nav left" onClick={onPrev} aria-label="Previous image">
+          ❮
+        </button>
 
-      <span
-        className="lightbox-arrow right"
-        onClick={(e) => {
-          e.stopPropagation();
-          onNext();
-        }}
-      >
-        &#10095;
-      </span>
+        <img src={src} alt={desc} className="lightbox-image" />
 
-      <p className="lightbox-desc">{desc}</p>
+        <button type="button" className="lightbox-nav right" onClick={onNext} aria-label="Next image">
+          ❯
+        </button>
+
+        <p className="lightbox-desc">{desc}</p>
+      </div>
     </div>
   );
 }

@@ -1,18 +1,23 @@
 import React from "react";
-import { FaInstagram } from "react-icons/fa"; // Instagram icon
+import { FaInstagram } from "react-icons/fa";
+import "../index.css";
 
 export default function Footer() {
   return (
     <footer className="footer">
-      <p>© {new Date().getFullYear()} Marove Aqua. All rights reserved.</p>
-      <a
-        href="https://www.instagram.com/marove_aqua"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="instagram-link"
-      >
-        <FaInstagram />
-      </a>
+      <div className="footer-inner">
+        <p>© {new Date().getFullYear()} Marove Aqua. All rights reserved.</p>
+
+        <a
+          href="https://www.instagram.com/"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Visit Instagram"
+          className="footer-social"
+        >
+          <FaInstagram />
+        </a>
+      </div>
     </footer>
   );
 }
