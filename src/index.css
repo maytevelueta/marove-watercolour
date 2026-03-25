@@ -395,7 +395,6 @@ html, body {
   }
 }
 
-/* Tablet and smaller devices */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
