@@ -97,6 +97,7 @@ main {
 
   .hamburger {
     display: flex;
+    z-index: 200;
   }
 
   .nav-links {
@@ -116,7 +117,7 @@ main {
     box-shadow: -5px 0 15px rgba(0,0,0,0.1);
 
     transition: right 0.3s ease;
-    z-index: 150;
+    z-index: 250;
   }
 
   .nav-links.open {
@@ -135,7 +136,7 @@ main {
   opacity: 0;
   pointer-events: none;
   transition: 0.3s;
-  z-index: 140;
+  z-index: 200;
 }
 
 .nav-overlay.open {
