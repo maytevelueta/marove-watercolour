@@ -13,11 +13,11 @@ export default function Navbar() {
   
   {/* Desktop nav links */}
   <ul className={`nav-links ${isOpen ? "open" : ""}`}>
-    <li><a href="/">Home</a></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="/gallery">Gallery</a></li>
-    <li><a href="/contact">Contact</a></li>
-  </ul>
+  <li><a href="/" onClick={() => setIsOpen(false)}>Home</a></li>
+  <li><a href="/about" onClick={() => setIsOpen(false)}>About</a></li>
+  <li><a href="/gallery" onClick={() => setIsOpen(false)}>Gallery</a></li>
+  <li><a href="/contact" onClick={() => setIsOpen(false)}>Contact</a></li>
+</ul>
 
   {/* Hamburger (mobile only) */}
   <div
