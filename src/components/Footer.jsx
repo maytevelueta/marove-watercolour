@@ -9,33 +9,24 @@ export default function Footer() {
         <p>© {new Date().getFullYear()} Marove Aqua. All rights reserved.</p>
 
         <div className="footer-social">
-          <a
-            href="https://www.instagram.com/marove_aqua/"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Visit Instagram"
-          >
-            <FaInstagram />
-          </a>
+  <a href="https://www.etsy.com/shop/MaroveAqua?ref=dashboard-header" target="_blank" rel="noreferrer">
+    <span className="icon">
+      <FaEtsy />
+    </span>
+  </a>
 
-          <a
-            href="https://www.etsy.com/shop/MaroveAqua?ref=dashboard-header"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Visit Etsy"
-          >
-            <FaEtsy />
-          </a>
+  <a href="https://www.instagram.com/marove_aqua/" target="_blank" rel="noreferrer">
+    <span className="icon">
+      <FaInstagram />
+    </span>
+  </a>
 
-          <a
-            href="https://www.facebook.com/maroveaqua/"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Visit Facebook"
-          >
-            <FaFacebookF />
-          </a>
-        </div>
+  <a href="https://www.facebook.com/maroveaqua/" target="_blank" rel="noreferrer">
+    <span className="icon">
+      <FaFacebookF />
+    </span>
+  </a>
+</div>
       </div>
     </footer>
   );
