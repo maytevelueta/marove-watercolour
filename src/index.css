@@ -350,6 +350,64 @@ p {
   color: white;
   border-color: var(--text);
 }
+.carousel-wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding-block: 1rem;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1.25rem;
+  width: max-content;
+  animation: scrollGallery 36s linear infinite;
+}
+
+.carousel-wrapper:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+.carousel-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.carousel-card {
+  margin: 0;
+  width: 220px;
+}
+
+.carousel-card img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 1.25rem;
+  display: block;
+  box-shadow: 0 12px 32px rgba(19, 33, 28, 0.12);
+}
+
+.carousel-card figcaption {
+  padding-top: 0.7rem;
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+@keyframes scrollGallery {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 640px) {
+  .carousel-card {
+    width: 170px;
+  }
+}
 
 .gallery-grid {
   display: grid;
