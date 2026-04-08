@@ -23,10 +23,13 @@ export default function Navbar() {
   return (
     <header className="site-header">
       <nav className="navbar container" aria-label="Main navigation">
-        <Link to="/" className="brand" onClick={closeMenu} aria-label="Marove Aqua home">
-          <span className="brand-mark">Marove</span>
-          <span className="brand-submark">Aqua</span>
-        </Link>
+        <Link to="/" className="brand" onClick={closeMenu} aria-label="Marove aqua home">
+  <img src="/images/logo.png" alt="Marove aqua logo" className="brand-logo" />
+  <div className="brand-text">
+    <span className="brand-mark">Marove</span>
+    <span className="brand-submark">aqua</span>
+  </div>
+</Link>
 
         <button
           type="button"

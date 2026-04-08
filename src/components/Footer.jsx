@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FiInstagram, FiMail } from "react-icons/fi";
+import { SiEtsy } from "react-icons/si";
 
 export default function Footer() {
   return (
@@ -19,18 +20,28 @@ export default function Footer() {
         </div>
 
         <div className="footer-socials" aria-label="Social links">
-          <a
-            href="https://www.instagram.com/maroveaqua/"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Instagram"
-          >
-            <FiInstagram />
-          </a>
-          <a href="mailto:hello@marove-aqua.com" aria-label="Email">
-            <FiMail />
-          </a>
-        </div>
+  <a
+    href="https://www.instagram.com/maroveaqua/"
+    target="_blank"
+    rel="noreferrer"
+    aria-label="Instagram"
+  >
+    <FiInstagram />
+  </a>
+
+  <a
+    href="https://www.etsy.com/shop/MaroveAqua"
+    target="_blank"
+    rel="noreferrer"
+    aria-label="Etsy"
+  >
+    <SiEtsy />
+  </a>
+
+  <a href="mailto:hello@marove-aqua.com" aria-label="Email">
+    <FiMail />
+  </a>
+</div>
       </div>
 
       <div className="footer-bottom container">
