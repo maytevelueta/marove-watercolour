@@ -1,69 +1,73 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import Lightbox from "../components/Lightbox";
-import "../index.css";
+import { artworks } from "../data/artworks";
 
-const images = [
-  { src: "/images/art1.jpg", desc: "Blueberries / Vaccinium corymbosum. Watercolour on 23 x 31cm Arches hot press paper." },
-  { src: "/images/art2.jpg", desc: "Pansy Swiss Giant Blue Blotch / Viola x wittrockiana. Watercolour on 23 x 31cm Arches hot press paper." },
-  { src: "/images/art3.jpg", desc: "Single tulip / Tulipa gesneriana. Watercolour on 23 x 31cm Arches hot press paper." },
-  { src: "/images/art4.jpg", desc: "Camellia / Camellia japonica. Watercolour on 23 x 31cm Arches hot press paper." },
-  { src: "/images/art5.jpg", desc: "Paperflower / Bougainvillea glabra. Watercolour on 23 x 31cm Arches hot press paper." },
-  { src: "/images/art7.jpg", desc: "Benton Lorna / Iris x germanica. Watercolour on 46 x 61cm Arches hot press paper." },
-  { src: "/images/art8.jpg", desc: "Common octopus / Octopus vulgaris. Watercolour on 23 x 31cm Arches hot press paper." },
-  { src: "/images/art9.jpg", desc: "Hydrangea / Hydrangea macrophylla. Watercolour on 23 x 31cm Arches hot press paper." },
-  { src: "/images/art10.jpg", desc: "Magnolia / Magnolia x soulangeana. Watercolour on 23 x 31cm Arches hot press paper." },
-  { src: "/images/art11.jpg", desc: "Purple bearded iris / Iris x germanica. Watercolour on 23 x 31cm Arches hot press paper." },
-  { src: "/images/art12.jpg", desc: "Daffodil / Narcissus. Watercolour on 23 x 31cm Arches hot press paper." },
-  { src: "/images/art13.jpg", desc: "Radishes / Raphanus sativus. Watercolour on 23 x 31cm Fabriano cold press paper." },
-  { src: "/images/art14.jpg", desc: "Passion fruit / Passiflora edulis Sims. Watercolour on 23 x 31cm Fabriano cold press paper." },
-  { src: "/images/art15.jpg", desc: "Hollyhock / Alcea, common hollyhock. Watercolour on 23 x 31cm Fabriano cold press paper." },
-  { src: "/images/art16.jpg", desc: "Kingfisher / Alcedo atthis. Watercolour on 23 x 31cm Fabriano cold press paper." },
-  { src: "/images/art17.jpg", desc: "Radishes / Raphanus sativus. Watercolour on 23 x 31cm Fabriano cold press paper." },
-  { src: "/images/art18.jpg", desc: "Passion fruit / Passiflora edulis Sims. Watercolour on 23 x 31cm Fabriano cold press paper." },
-  { src: "/images/art19.jpg", desc: "Hollyhock / Alcea, common hollyhock. Watercolour on 23 x 31cm Fabriano cold press paper." },
-  { src: "/images/art20.jpg", desc: "Kingfisher / Alcedo atthis. Watercolour on 23 x 31cm Fabriano cold press paper." },
-];
+const filters = ["All", "Botanical", "Wildlife", "Marine life"];
 
 export default function Gallery() {
   const [selectedIndex, setSelectedIndex] = useState(null);
+  const [activeFilter, setActiveFilter] = useState("All");
+
+  const filteredArtworks = useMemo(() => {
+    if (activeFilter === "All") return artworks;
+    return artworks.filter((artwork) => artwork.category === activeFilter);
+  }, [activeFilter]);
 
   return (
-    <section className="section gallery-section">
-      <div className="gallery-header">
-        <h1 className="page-title">Gallery</h1>
-        <p className="gallery-intro">
-          A glimpse into my latest work.
-        </p>
+    <section className="page-section container">
+      <div className="section-heading section-heading-spaced">
+        <div>
+          <p className="eyebrow">Collection</p>
+          <h1 className="page-title">Gallery</h1>
+        </div>
+
+        <div className="filter-row" role="tablist" aria-label="Filter artworks by category">
+          {filters.map((filter) => (
+            <button
+              key={filter}
+              type="button"
+              className={activeFilter === filter ? "filter-chip is-active" : "filter-chip"}
+              onClick={() => setActiveFilter(filter)}
+            >
+              {filter}
+            </button>
+          ))}
+        </div>
       </div>
 
       <div className="gallery-grid">
-        {images.map((img, index) => (
+        {filteredArtworks.map((artwork, index) => (
           <button
-            key={img.src}
+            key={artwork.id}
             type="button"
-            className="gallery-item"
+            className="gallery-card"
             onClick={() => setSelectedIndex(index)}
-            aria-label={`Open artwork ${index + 1}`}
           >
-            <img src={img.src} alt={img.desc} />
+            <img src={artwork.src} alt={artwork.alt} loading="lazy" />
+            <div className="gallery-card-body">
+              <p className="eyebrow small">{artwork.category}</p>
+              <h2>{artwork.title}</h2>
+              <p>{artwork.size}</p>
+            </div>
           </button>
         ))}
       </div>
 
-      {selectedIndex !== null && (
-        <Lightbox
-          images={images}
-          index={selectedIndex}
-          onClose={() => setSelectedIndex(null)}
-          onPrev={() =>
-            setSelectedIndex((selectedIndex - 1 + images.length) % images.length)
-          }
-          onNext={() => setSelectedIndex((selectedIndex + 1) % images.length)}
-        />
-      )}
-      <p className="gallery-intro">
-         Please note that not all pieces are available for sale, but if you're interested in any of them or would like to commission a custom painting, feel free to contact me.
-        </p>
+      <Lightbox
+        images={filteredArtworks}
+        index={selectedIndex}
+        onClose={() => setSelectedIndex(null)}
+        onPrev={() =>
+          setSelectedIndex((current) =>
+            current === null ? null : (current - 1 + filteredArtworks.length) % filteredArtworks.length
+          )
+        }
+        onNext={() =>
+          setSelectedIndex((current) =>
+            current === null ? null : (current + 1) % filteredArtworks.length
+          )
+        }
+      />
     </section>
   );
 }

@@ -1,32 +1,41 @@
 import React from "react";
-import { FaInstagram, FaFacebookF, FaEtsy } from "react-icons/fa";
-import "../index.css";
+import { Link } from "react-router-dom";
+import { FiInstagram, FiMail } from "react-icons/fi";
 
 export default function Footer() {
   return (
-    <footer className="footer">
-      <div className="footer-inner">
-        <p>© {new Date().getFullYear()} Marove Aqua. All rights reserved.</p>
+    <footer className="site-footer">
+      <div className="container footer-inner">
+        <div>
+          <p className="footer-title">Marove Aqua</p>
+          <p className="footer-copy">
+            Original watercolour works inspired by flora, fauna and the quiet beauty of nature.
+          </p>
+        </div>
 
-        <div className="footer-social">
-  <a href="https://www.etsy.com/shop/MaroveAqua?ref=dashboard-header" target="_blank" rel="noreferrer">
-    <span className="icon">
-      <FaEtsy />
-    </span>
-  </a>
+        <div className="footer-links">
+          <Link to="/gallery">View gallery</Link>
+          <Link to="/contact">Commission enquiry</Link>
+        </div>
 
-  <a href="https://www.instagram.com/marove_aqua/" target="_blank" rel="noreferrer">
-    <span className="icon">
-      <FaInstagram />
-    </span>
-  </a>
+        <div className="footer-socials" aria-label="Social links">
+          <a
+            href="https://www.instagram.com/maroveaqua/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Instagram"
+          >
+            <FiInstagram />
+          </a>
+          <a href="mailto:hello@marove-aqua.com" aria-label="Email">
+            <FiMail />
+          </a>
+        </div>
+      </div>
 
-  <a href="https://www.facebook.com/maroveaqua/" target="_blank" rel="noreferrer">
-    <span className="icon">
-      <FaFacebookF />
-    </span>
-  </a>
-</div>
+      <div className="footer-bottom container">
+        <span>© {new Date().getFullYear()} Marove Aqua</span>
+        <span>London · Watercolour artist</span>
       </div>
     </footer>
   );

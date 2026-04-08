@@ -1,12 +1,10 @@
-import React from "react";
-import "../index.css";
-
 export default function About() {
   return (
-    <section className="section about-section">
-      <h1 className="page-title">About</h1>
+    <section className="page-section container narrow">
+      <p className="eyebrow">About the artist</p>
+      <h1 className="page-title">A practice rooted in observation and stillness</h1>
 
-      <div className="about-text">
+      <div className="rich-text">
         <p>
           Hi, I'm Mayte, a watercolour artist from Mexico. I started Marove Aqua
           in early 2021 as a small personal project to bring colour and life to
@@ -26,7 +24,7 @@ export default function About() {
           painting, please don’t hesitate to get in touch — I'd be delighted to
           create something unique for you.
         </p>
-      </div>
+        </div>
     </section>
   );
 }

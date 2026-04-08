@@ -1,36 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { artworks } from "../data/artworks";
 import "./Carousel.css";
 
 export default function Carousel() {
-  const images = [
-    "/images/art1.jpg",
-    "/images/art2.jpg",
-    "/images/art3.jpg",
-    "/images/art4.jpg",
-    "/images/art5.jpg",
-    "/images/art7.jpg",
-    "/images/art8.jpg",
-    "/images/art9.jpg",
-    "/images/art10.jpg",
-    "/images/art11.jpg",
-    "/images/art12.jpg",
-    "/images/art13.jpg",
-    "/images/art14.jpg",
-    "/images/art15.jpg",
-    "/images/art16.jpg",
-    "/images/art17.jpg",
-    "/images/art18.jpg",
-    "/images/art19.jpg",
-    "/images/art20.jpg",
-  ];
-
-  const loopedImages = [...images, ...images];
+  const featured = artworks.slice(0, 10);
+  const looped = [...featured, ...featured];
 
   return (
-    <div className="carousel-wrapper">
+    <div className="carousel-wrapper" aria-label="Featured artworks preview">
       <div className="carousel-track">
-        {loopedImages.map((src, index) => (
-          <img key={`${src}-${index}`} src={src} alt="" />
+        {looped.map((artwork, index) => (
+          <Link key={`${artwork.id}-${index}`} to="/gallery" className="carousel-link">
+            <figure className="carousel-card">
+              <img src={artwork.src} alt={artwork.alt} loading="lazy" />
+              <figcaption>{artwork.title}</figcaption>
+            </figure>
+          </Link>
         ))}
       </div>
     </div>
