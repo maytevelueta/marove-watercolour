@@ -19,6 +19,9 @@ export default function Gallery() {
         <div>
           <p className="eyebrow">Collection</p>
           <h1 className="page-title">Gallery</h1>
+          <p className="gallery-intro">
+            A glympse into my latest work.
+          </p>
         </div>
 
         <div className="filter-row" role="tablist" aria-label="Filter artworks by category">
@@ -68,6 +71,12 @@ export default function Gallery() {
           )
         }
       />
+      <div className="section-heading-spaced">
+      <p className="gallery-intro">
+            Please note that some pieces are not available, if you would like to enquire about a specific artwork or commission a custom piece, get in touch via the contact page.
+      </p>
+      </div>
     </section>
+    
   );
 }

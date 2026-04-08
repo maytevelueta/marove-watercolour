@@ -46,7 +46,7 @@ export default function Footer() {
 
       <div className="footer-bottom container">
         <span>© {new Date().getFullYear()} Marove Aqua</span>
-        <span>London · Watercolour artist</span>
+        <span>United Kingdom · Mexico · Watercolour artist</span>
       </div>
     </footer>
   );

@@ -43,7 +43,7 @@ export default function Contact() {
     <section className="page-section container contact-layout">
       <div>
         <p className="eyebrow">Contact</p>
-        <h1 className="page-title">Commissions, enquiries and collaborations</h1>
+        <h1 className="page-title">Commissions and general enquiries</h1>
         <p className="contact-intro">
           If you would like to enquire about an original piece, discuss a commission,
           or simply get in touch, send a message below.
@@ -85,7 +85,7 @@ export default function Contact() {
         </label>
 
         <button type="submit" className="button button-primary" disabled={isSending}>
-          {isSending ? "Sending…" : "Send enquiry"}
+          {isSending ? "Sending…" : "Send enquiry ✨"}
         </button>
 
         {status ? <p className="status-message">{status}</p> : null}

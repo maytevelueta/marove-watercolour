@@ -39,7 +39,7 @@ export default function Home() {
       <section className="section container">
         <div className="section-heading">
           <p className="eyebrow">Selected works</p>
-          <h2>A moving preview of the collection</h2>
+          <h2>See the whole</h2>
         </div>
         <Carousel />
       </section>

@@ -24,7 +24,7 @@ export default function Navbar() {
     <header className="site-header">
       <nav className="navbar container" aria-label="Main navigation">
         <Link to="/" className="brand" onClick={closeMenu} aria-label="Marove aqua home">
-  <img src="/images/logo.png" alt="Marove aqua logo" className="brand-logo" />
+  <img src="/images/logo-bird.png" alt="Marove aqua logo" className="brand-logo" />
   <div className="brand-text">
     <span className="brand-mark">Marove</span>
     <span className="brand-submark">aqua</span>
