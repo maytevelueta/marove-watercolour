@@ -71,11 +71,16 @@ export default function Gallery() {
           )
         }
       />
-      <div className="section-heading-spaced">
-      <p className="gallery-intro">
-            Please note that some pieces are not available, if you would like to enquire about a specific artwork or commission a custom piece, get in touch via the contact page. You can also visit my Etsy shop for for a curated selection of original digital files and prints.
-      </p>
-      </div>
+  <p className="gallery-intro">
+  Please note that some pieces may no longer be available, if you would like to enquire
+  about a specific artwork or commission a custom piece, get in touch via the
+  contact page. Prices for original works vary according to size and complexity. Completion times depend on the current queue, which usually ranges from 1 to 4 weeks. Worldwide shipping is included for artworks up to 46 × 61 cm (18 × 24 in).
+  </p>
+     
+  <p className="gallery-intro"> 
+  You can also visit my <a href="https://www.etsy.com/shop/MaroveAqua" target="_blank" rel="noreferrer">
+  Etsy shop</a> for a curated selection of original digital files and prints from existing works.
+  </p>
     </section>
     
   );
