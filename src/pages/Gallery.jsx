@@ -73,7 +73,7 @@ export default function Gallery() {
       />
       <div className="section-heading-spaced">
       <p className="gallery-intro">
-            Please note that some pieces are not available, if you would like to enquire about a specific artwork or commission a custom piece, get in touch via the contact page.
+            Please note that some pieces are not available, if you would like to enquire about a specific artwork or commission a custom piece, get in touch via the contact page. You can also visit my Etsy shop for for a curated selection of original digital files and prints.
       </p>
       </div>
     </section>
