@@ -46,7 +46,7 @@ export default function Contact() {
         <h1 className="page-title">Commissions and general enquiries</h1>
         <p className="contact-intro">
           If you would like to enquire about an original piece, discuss a commission,
-          or simply get in touch, send a message below.
+          or simply get in touch, send me a message.
         </p>
       </div>
 
