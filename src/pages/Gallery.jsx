@@ -78,7 +78,7 @@ export default function Gallery() {
   </p>
      
   <p className="gallery-intro"> 
-  You can also visit my <a href="https://www.etsy.com/shop/MaroveAqua" target="_blank" rel="noreferrer">
+  You can also visit my <a href="https://www.etsy.com/shop" target="_blank" rel="noreferrer">
   Etsy shop</a> for a curated selection of original digital files and prints from existing works.
   </p>
     </section>
