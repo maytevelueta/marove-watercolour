@@ -30,7 +30,7 @@ export default function Footer() {
   </a>
 
   <a
-    href="https://www.etsy.com/shop/MaroveAqua"
+    href="https://www.etsy.com/"
     target="_blank"
     rel="noreferrer"
     aria-label="Etsy"
