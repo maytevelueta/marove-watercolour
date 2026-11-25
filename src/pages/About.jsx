@@ -7,19 +7,20 @@ export default function About() {
       <div className="rich-text">
         <p>
           Hi, I'm Mayte, a watercolour artist from Mexico, currently based in London. 
-          I discovered watercolour in 2021, while working on a small personal project 
+          I discovered watercolours as an artistic mediumin 2021 while working on a small personal project 
           to bring colour and life into my home, little knowing that it would eventually 
           grow into something much bigger.
         </p>
 
         <p>
           I create watercolour paintings inspired by the natural world, 
-          with a particular focus on botanical subjects, birds and animals. 
+          with a particular focus on botanical subjects and animals, 
           I'm constantly exploring new techniques and seeking inspiration
           from nature.
         </p>
 
-        <p>I believe that the quality of materials is essential to creating artwork 
+        <p>
+          I believe that the quality of materials is essential to creating artwork 
           that lasts. I carefully select professional-grade materials, working 
           exclusively with Arches hot-pressed watercolour paper and Daniel Smith and 
           Winsor & Newton paints to capture fine details and preserve the richness of each painting.
