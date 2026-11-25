@@ -6,7 +6,10 @@ export default function About() {
 
       <div className="rich-text">
         <p>
-          Hi, I'm Mayte, a watercolour artist from Mexico. I discovered watercolour in 2021, while working on a small personal project to bring colour and life into my home, little knowing that it would eventually grow into something much bigger
+          Hi, I'm Mayte, a watercolour artist from Mexico, currently based in London. 
+          I discovered watercolour in 2021, while working on a small personal project 
+          to bring colour and life into my home, little knowing that it would eventually 
+          grow into something much bigger.
         </p>
 
         <p>
