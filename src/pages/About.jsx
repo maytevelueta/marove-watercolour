@@ -13,9 +13,9 @@ export default function About() {
         </p>
 
         <p>
-          My work focuses on botanical illustrations and animal subjects,
-          capturing the delicate details and vibrant textures of the natural
-          world. I'm constantly exploring new techniques and seeking inspiration
+          I create watercolour paintings inspired by the natural world, 
+          with a particular focus on botanical subjects, birds and animals. 
+          I'm constantly exploring new techniques and seeking inspiration
           from nature.
         </p>
 
