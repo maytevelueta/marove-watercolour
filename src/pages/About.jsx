@@ -19,6 +19,12 @@ export default function About() {
           from nature.
         </p>
 
+        <p>I believe that the quality of materials is essential to creating artwork 
+          that lasts. I carefully select professional-grade materials, working 
+          exclusively with Arches hot-pressed watercolour paper and Daniel Smith and 
+          Winsor & Newton paints to capture fine details and preserve the richness of each painting.
+        </p>
+
         <p>
           If you have any enquiries or would like to commission a custom
           painting, please don't hesitate to get in touch — I'd be delighted to
