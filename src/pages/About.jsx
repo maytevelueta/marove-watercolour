@@ -6,10 +6,7 @@ export default function About() {
 
       <div className="rich-text">
         <p>
-          Hi, I'm Mayte, a watercolour artist from Mexico, currently located in London. I started Marove Aqua
-          in early 2021 as a small personal project to bring colour and life to
-          my home. Discovering this medium was a truly transformative experience
-          for me.
+          Hi, I'm Mayte, a watercolour artist from Mexico. I discovered watercolour in 2021, while working on a small personal project to bring colour and life into my home, little knowing that it would eventually grow into something much bigger
         </p>
 
         <p>
